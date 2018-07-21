@@ -1,0 +1,48 @@
+extends layout
+block jscripts
+    script(src='/javascripts/users.js')
+block content
+    div.container
+        div(class='row')
+            h5 Cadastro de Usuário
+            p(class='flow-text') Cadastre-se para mandar sua pegunta e participar do nosso grupo. 
+                |Não se preocupe, com exceção do seu login, cidade e estado nenhum outro dado será publicado.
+        form(method='post' action='/cadastro' name='reg_form' id='reg_form')
+            div(class='row' )
+                div(class='input-field col s12 m6 l6')
+                    input(placeholder='Nome' id='nome' type='text' class='validate')
+                    label(for='nome') Nome:
+                div(class='input-field col s12 m6 l6')
+                    input(placeholder='Sobrenome' id='sobrenome' type='text' class='validate')
+                    label(for='sobrenome') Sobrenome:
+
+            div(class='row')
+                div(class='input-field col s12 m12 l12')
+                    input(placeholder='Email' id='email' type='email' class='validate')
+                    label(for='email') Email:
+                    span(class="helper-text" data-error="wrong" data-success="right") Confirmação obrigatória.
+            div(class='row')
+                div(class='input-field col s12 m6 l6')
+                    p Data de Nascimento:
+                    input(id='nascimento' type='date' class='datepicker')
+                div(class='col s12 m6 l6 ')
+                    p Sexo:
+                    p 
+                        input(name='sexo' id='masc'  value='m' type='radio' selected)
+                        label(for='masc') Masculino
+                        input(name='sexo' id='fem' value='f' type='radio')
+                        label(for='fem') Feminino
+            div(class='row')
+                div(class='input-field col s12 m6 l4')
+                    select
+                        each uf in estados
+                            option(value=uf.id) #{uf.sigla}
+                    label   Estado:
+                div(class='input-field col s12 m6 l8')
+                    input(type='text' id='autocomplete-input' class='autocomplete')
+                    label(for='autocomplete-input') Cidade:
+            div(class='row')
+                p(class='flow-text')    Ao se cadastrar você afirma que concorda com os nossos termos.   
+            div(class='row')
+                button(class='btn waves-effect waves-light' type='submit') Cadastrar
+                    i(class='material-icons right') save

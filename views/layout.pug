@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    link(rel='stylesheet', href='/materialize/dist/css/materialize.css')
+    script(src='/jquery/dist/jquery.js')
+    script(src='/materialize/dist/js/materialize.js')
+    script(src='/javascripts/mynav.js')
+    block jscripts
+
+
+
+  body
+    nav
+      #nav-wrapper
+        a(class='brand-logo center' href='#' ) Logo
+        a(class='button-collapse' data-activates='mobmenu' href='#')
+          i(class='material-icons left') menu
+        ul(class='left hide-on-med-and-down' id='nav-mobile')
+          li
+            a(href='cadastro') Cadastro
+          li
+            a(href='#') Time
+          li
+            a(href='#') Sobre
+    ul(class='side-nav' id='mobmenu')
+      li
+        a(href='cadastro') Cadastro
+      li
+        a(href='#') Time
+      li
+        a(href='#') Sobre
+    block content
