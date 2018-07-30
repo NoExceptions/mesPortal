@@ -2,7 +2,9 @@ var cliente = require('../helpers/rest_client');
 
 //cliente.get_jdata('https://servicodados.ibge.gov.br/api/v1/localidades/estados/');
 
-estados =[{"id":11,"sigla":"RO","nome":"Rondônia","regiao":{"id":1,"sigla":"N","nome":"Norte"}},
+estados =[
+{"id":0,"sigla":"UF","nome":"Nenhum","regiao":{"id":0,"sigla":"0","nome":"Nenhum"}},
+{"id":11,"sigla":"RO","nome":"Rondônia","regiao":{"id":1,"sigla":"N","nome":"Norte"}},
 {"id":12,"sigla":"AC","nome":"Acre","regiao":{"id":1,"sigla":"N","nome":"Norte"}},
 {"id":13,"sigla":"AM","nome":"Amazonas","regiao":{"id":1,"sigla":"N","nome":"Norte"}},
 {"id":14,"sigla":"RR","nome":"Roraima","regiao":{"id":1,"sigla":"N","nome":"Norte"}},

@@ -10,21 +10,21 @@ block content
         form(method='post' action='/cadastro' name='reg_form' id='reg_form')
             div(class='row' )
                 div(class='input-field col s12 m6 l6')
-                    input(placeholder='Nome' id='nome' type='text' class='validate')
+                    input(placeholder='Nome' id='nome' type='text' class='validate' name='name')
                     label(for='nome') Nome:
                 div(class='input-field col s12 m6 l6')
-                    input(placeholder='Sobrenome' id='sobrenome' type='text' class='validate')
+                    input(placeholder='Sobrenome' id='sobrenome' type='text' class='validate' name='last_name')
                     label(for='sobrenome') Sobrenome:
 
             div(class='row')
                 div(class='input-field col s12 m12 l12')
-                    input(placeholder='Email' id='email' type='email' class='validate')
+                    input(placeholder='Email' id='email' type='email' class='validate' name='email')
                     label(for='email') Email:
                     span(class="helper-text" data-error="wrong" data-success="right") Confirmação obrigatória.
             div(class='row')
                 div(class='input-field col s12 m6 l6')
                     p Data de Nascimento:
-                    input(id='nascimento' type='date' class='datepicker')
+                    input(id='nascimento' type='date' class='datepicker' name='birthdate')
                 div(class='col s12 m6 l6 ')
                     p Sexo:
                     p 
@@ -34,13 +34,20 @@ block content
                         label(for='fem') Feminino
             div(class='row')
                 div(class='input-field col s12 m6 l4')
-                    select
+                    select(name = 'state')
                         each uf in estados
                             option(value=uf.id) #{uf.sigla}
                     label   Estado:
                 div(class='input-field col s12 m6 l8')
-                    input(type='text' id='autocomplete-input' class='autocomplete')
+                    input(type='text' id='autocomplete-input' class='autocomplete' name='city')
                     label(for='autocomplete-input') Cidade:
+            div(class='row')
+                div(class='input-field col s12 m6 l6')
+                    input(id='password' type='password' class='validate')
+                    label(for='password') Senha:
+                div(class='input-field col s12 m6 l6')
+                    input(id='password_conf' type='password' class='validate')
+                    label(id='lblconf' for='password_conf' data-error='Senha não confere' data-success='Senha confere.') Confirmação:
             div(class='row')
                 p(class='flow-text')    Ao se cadastrar você afirma que concorda com os nossos termos.   
             div(class='row')

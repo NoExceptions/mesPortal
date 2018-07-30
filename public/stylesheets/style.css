@@ -1,8 +1,12 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.brand-logo img {
+  display: inline-block;
+  height: 64px;
+  padding: 5px;
 }
 
-a {
-  color: #00B7FF;
+@media (max-width: 600px) {
+  .brand-logo img {
+    height: 54px;
+    padding: 5px;
+  }
 }

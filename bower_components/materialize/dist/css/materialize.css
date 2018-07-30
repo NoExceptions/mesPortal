@@ -4208,7 +4208,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #8629aa;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -4265,12 +4265,13 @@ nav .button-collapse i {
   line-height: 56px;
 }
 
+
 nav .brand-logo {
   position: absolute;
   color: #fff;
   display: inline-block;
   font-size: 2.1rem;
-  padding: 0;
+
 }
 
 nav .brand-logo.center {
@@ -5201,13 +5202,13 @@ small {
 
 .btn:focus, .btn-large:focus,
 .btn-floating:focus {
-  background-color: #1d7d74;
+  background-color: #8931ac;
 }
 
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #8629aa;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -5216,7 +5217,7 @@ small {
 }
 
 .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #601d7a;
 }
 
 .btn-floating {
@@ -5229,7 +5230,7 @@ small {
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #26a69a;
+  background-color: #8629aa;
   border-radius: 50%;
   -webkit-transition: .3s;
   transition: .3s;
@@ -5238,7 +5239,7 @@ small {
 }
 
 .btn-floating:hover {
-  background-color: #26a69a;
+  background-color: #601d7a;
 }
 
 .btn-floating:before {

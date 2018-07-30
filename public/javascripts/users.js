@@ -1,41 +1,60 @@
 $(document).ready(
 
     function(){
-        $('input[name="sexo"]').change(function() {
-        console.log('fuck');
-        console.log($('input[name="sexo"]:checked').val());
-        });
-        
+
         $('select').material_select();
         $('select').change(function() {
             getCities($('select').val());
         });
 
         $('input.autocomplete').autocomplete({
-            data: {
-              "Apple": null,
-              "Microsoft": null,
-              "Google": null,
-            },
+            
             limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
             onAutocomplete: function(val) {
               // Callback function when value is autcompleted.
             },
             minLength: 3, // The minimum length of the input for the autocomplete to start. Default: 1.
           });
+
+          $("#password").on("focusout", function (e) {
+            if ($(this).val() != $("#password_conf").val()) {
+                $("#password_conf").removeClass("valid").addClass("invalid");
+            } else {
+                $("#password_conf").removeClass("invalid").addClass("valid");
+            }
+        });
+        
+        $("#password_conf").on("keyup", function (e) {
+            if ($("#password").val() != $(this).val()) {
+                $(this).removeClass("valid").addClass("invalid");
+            } else {
+                $(this).removeClass("invalid").addClass("valid");
+            }
+        });
+
+        
+
+        
                 
     }
+
+    
+
+    
 )
 
 
-{
 
+
+{
+    console.log("Date picker!");
     $('.pickadate').pickadate({
         selectMonths: true,
-        selectYears: 100, 
-        format: 'dd/mm/yyyy'
+        selectYears: true, 
+        format: 'yyyy-mm-dd'
     });
-    console.log('gotcha!2');
+
+  
 
     function getCities(uf) {
 
@@ -61,7 +80,7 @@ $(document).ready(
             },
 
             error: function (jqXHR, status) {
-                console.log('falhou')
+
             }
         });
     }
